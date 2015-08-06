@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div
+    h1= title
+    a(href='/bikes/new') Add new bikes
+    ul
+      each bike in bikes
+        li
+          h3
+            a(href='/bikes/#{bike.id}')= bike.name
+            span= bike.createdAt

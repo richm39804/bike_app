@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+    div
+    h1= title
+    form(method='POST' action ='/bikes/#{bike.id}?_method=PUT')
+      p Name:
+          input(type='text' name='name' placeholder= 'Name' value='#{bike.name}')
+      p
+          button(type='submit') Update bike
+    a(href='/bikes') Back to home
+

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div
+    h1= title
+    p= bike.name
+    ul
+      li
+       a(href='/bikes/#{bike.id}/edit') Edit this bike
+      li
+        form(method='POST' action ='/bikes/#{bike.id}?_method=DELETE')
+          button(type= 'submit') Delete bike
+    a(href='/beers') Back to home
